@@ -1,0 +1,15 @@
+/* Define the mixin for left and right margins */
+@mixin margin-lr($left-right) {
+    margin-left: $left-right;
+    margin-right: $left-right;
+}
+
+/* Apply the mixin to the body tag with 10px margin */
+body {
+    @include margin-lr(10px);
+}
+
+/* Apply the mixin to the div tag with 15px margin */
+div {
+    @include margin-lr(15px);
+}
