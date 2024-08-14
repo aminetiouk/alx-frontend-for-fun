@@ -1,11 +1,8 @@
 /* Nested child declaration */
 
-$text-color: #3D3D3D;
-$text-color-red: #FF0000;
-
 body {
-    color: $text-color;
+    color: #3D3D3D;
     > .red:first-child {
-        color: $text-color-red;
+        color: #FF0000;
     }
 }
