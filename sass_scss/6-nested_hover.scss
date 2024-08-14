@@ -1,9 +1,8 @@
-/* Nested hover, change button color on hover */
-
+/* Changes button color on hover and mamakes use of child inheritance */
 button {
     color: #FF0000;
-
+  
     &:hover {
-        color: #00FF00;
+      color: #00FF00;
     }
 }
