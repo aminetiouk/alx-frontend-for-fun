@@ -37,5 +37,27 @@ This repository covers additional front-end topics essential for building respon
 ## Installation
 
 1. Clone the repository:
-   ```bash
+```bash
    git clone https://github.com/your-username/your-repo-name.git
+```
+2. Navigate to the project directory:
+```bash
+cd your-repo-name
+```
+3. Install any dependencies if necessary:
+```bash
+npm install
+```
+
+## Usage
+Each module is self-contained. Navigate to a specific module directory to explore the code and resources:
+```bash
+cd Flexbox
+```
+Open the files in your code editor or browser to test and modify.
+
+## Contributing
+Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
