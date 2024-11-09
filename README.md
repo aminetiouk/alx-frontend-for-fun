@@ -71,4 +71,4 @@ Contributions are welcome! Please fork this repository, make your changes, and s
 This project is licensed under the MIT License.
 
 ## Author
-* **Amine Tiouk** (@aminetiouk)
+* **Amine Tiouk** [@aminetiouk](https://github.com/aminetiouk)
