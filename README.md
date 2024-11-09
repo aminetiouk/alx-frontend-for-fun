@@ -7,6 +7,7 @@ This repository covers additional front-end topics essential for building respon
 - [Modules](#modules)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Tools Used](#tools-used)
 
 
 ## Modules
@@ -48,6 +49,13 @@ cd your-repo-name
 ```bash
 npm install
 ```
+## Tools Used
+<div align="center">
+  <a href="https://skillicons.dev">
+    <img src="https://skillicons.dev/icons?i=css,html,sass,nodejs&perline=10" />
+  </a>
+</div>
+
 
 ## Usage
 Each module is self-contained. Navigate to a specific module directory to explore the code and resources:
@@ -60,4 +68,5 @@ Open the files in your code editor or browser to test and modify.
 Contributions are welcome! Please fork this repository, make your changes, and submit a pull request.
 
 ## License
-This project is licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License.
+
