@@ -1,4 +1,4 @@
-# Front-End: More
+# Web Stack Specialization - Front-end
 
 This repository covers additional front-end topics essential for building responsive, accessible, and engaging web interfaces. Each module focuses on a specialized area, from Markdown to HTML conversion to advanced styling with Sass and SCSS.
 
@@ -70,3 +70,5 @@ Contributions are welcome! Please fork this repository, make your changes, and s
 ## License
 This project is licensed under the MIT License.
 
+## Author
+* **Amine Tiouk** (@aminetiouk)
