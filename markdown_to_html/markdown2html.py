@@ -10,7 +10,7 @@ import re
 def convert_markdown_to_html(markdown_file, html_file):
     """
     Converts Markdown content to HTML and writes it to the output file.
-    Supports heading levels 1 to 6, unordered lists, ordered lists, and paragraphs.
+    Supports heading levels 1 to 6, unordered lists, ordered lists, paragraphs, and bold/emphasis.
     """
     try:
         with open(markdown_file, 'r') as md_file:
@@ -28,6 +28,10 @@ def convert_markdown_to_html(markdown_file, html_file):
                 ul_list_item_match = re.match(r"^- (.+)", line)
                 # Ordered list match
                 ol_list_item_match = re.match(r"^\* (.+)", line)
+
+                # Bold and Emphasis matches
+                bold_match = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", line)
+                emphasis_match = re.sub(r"__(.+?)__", r"<em>\1</em>", bold_match)
 
                 if heading_match:
                     # Close any open lists or paragraph blocks before starting a new heading
@@ -60,7 +64,7 @@ def convert_markdown_to_html(markdown_file, html_file):
 
                     # Process unordered list item
                     list_item_text = ul_list_item_match.group(1)
-                    html_content += f"    <li>{list_item_text}</li>\n"
+                    html_content += f"    <li>{emphasis_match}</li>\n"
 
                 elif ol_list_item_match:
                     # Close paragraph blocks or unordered lists before starting an ordered list
@@ -76,7 +80,7 @@ def convert_markdown_to_html(markdown_file, html_file):
 
                     # Process ordered list item
                     list_item_text = ol_list_item_match.group(1)
-                    html_content += f"    <li>{list_item_text}</li>\n"
+                    html_content += f"    <li>{emphasis_match}</li>\n"
 
                 elif line == "":
                     # End of paragraph block; close and output it
@@ -91,7 +95,7 @@ def convert_markdown_to_html(markdown_file, html_file):
                     if in_ol_list:
                         html_content += "</ol>\n"
                         in_ol_list = False
-                    paragraph_lines.append(line)
+                    paragraph_lines.append(emphasis_match)
 
             # Close any remaining open tags at the end of the document
             if in_ul_list:
