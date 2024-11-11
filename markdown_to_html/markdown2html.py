@@ -5,18 +5,27 @@ markdown2html.py - A script to convert Markdown to HTML.
 
 import sys
 import os
+import re
 
 def convert_markdown_to_html(markdown_file, html_file):
     """
-    Converts Markdown content to simple HTML and writes it to the output file.
-    For simplicity, this script only handles basic text conversion.
+    Converts Markdown content to HTML and writes it to the output file.
+    Supports heading levels 1 to 6.
     """
     try:
         with open(markdown_file, 'r') as md_file:
-            content = md_file.read()
+            html_content = ""
             
-            # Simple conversion logic (can be enhanced to handle Markdown syntax properly)
-            html_content = "<html><body><p>" + content.replace('\n', '<br>\n') + "</p></body></html>"
+            for line in md_file:
+                heading_match = re.match(r"^(#{1,6}) (.+)", line)
+                
+                if heading_match:
+                    heading_level = len(heading_match.group(1))
+                    heading_text = heading_match.group(2)
+                    html_content += f"<h{heading_level}>{heading_text}</h{heading_level}>\n"
+                else:
+                    # If not a heading, just wrap line in <p> tags
+                    html_content += f"<p>{line.strip()}</p>\n"
             
             with open(html_file, 'w') as output_file:
                 output_file.write(html_content)
