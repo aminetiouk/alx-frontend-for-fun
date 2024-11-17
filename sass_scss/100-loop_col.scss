@@ -1,6 +1,0 @@
-/* Loop from 1 to 4 to create .col-* classes */
-@for $i from 1 through 4 {
-    .col-#{$i} {
-        width: (100% / $i);
-    }
-}

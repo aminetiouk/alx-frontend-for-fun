@@ -1,6 +1,0 @@
-/* Loop from 1 to 5 to create h1 to h5 tags */
-@for $i from 1 through 5 {
-    h#{$i} {
-        font-size: #{$i}px;
-    }
-}
